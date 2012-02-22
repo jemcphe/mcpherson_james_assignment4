@@ -8,7 +8,7 @@ var testPhoneNumber = function (phoneNumber) {
 		console.log("Sorry, " + phoneNumber + " is an invalid phone number");
 		return false; 
 	} else {
-		console.log(phoneNumber + " is a valid phone number!");
+		console.log("" + phoneNumber);
 		return true; 
 		// MAKEUP: return Boolean, deliverable 3, deliverable 2
 	}
@@ -22,7 +22,7 @@ var testEmailAddress = function (emailAddress) {
 		console.log("Sorry, " + emailAddress + " is an invalid Email Address");
 		return false; 
 	} else {
-		console.log(emailAddress + " is a valid Email Address!");
+		console.log("" + emailAddress);
 		return true;
 	}
 };
@@ -35,12 +35,27 @@ var testURL = function(webSite) {
 		console.log("Sorry, " + webSite + " is an invalid URL");
 		return false; 
 	} else {
-		console.log(webSite + " is a valid URL!");
+		console.log("" + webSite);
 		return true;
 	}
 };
 
+/*******************Number Library*******************/
+//Format a number to use a specific number of decimal places
+//format for 2 decimal places
+var twoDecimalPlaces = function (number) {
+	var validEntry= number.toFixed(2);
+	if(validEntry) {
+		console.log("" + validEntry); 
+	}
+};
 
+console.log("Test for correct phone number format: ")
 testPhoneNumber("123-456-7890");
+console.log("Test for correct email formal: ");
 testEmailAddress("jemcphe11@gmail.com");
+console.log("Test for proper URL format: ")
 testURL("http://www.JamesIsAwesome.com");
+console.log("Test for number that displays with 2 decimal places: ")
+twoDecimalPlaces(11.5);
+console.log("Test whether number is above or below a number with a certain percentage: ")
