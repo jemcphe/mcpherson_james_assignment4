@@ -50,12 +50,25 @@ var twoDecimalPlaces = function (number) {
 	}
 };
 
+//Given a string version of a Number, return the value as an actual Number
+var stringToNumber = function (number) {
+	isNaN(number);
+	if(isNaN(number)) {
+		var invalidEntry = console.log(number + " is not a number");
+		return invalidEntry;
+	} else {
+		var conversion = console.log("" + Number(number));
+		return conversion;
+	}
+};
+
 console.log("Test for correct phone number format: ")
 testPhoneNumber("123-456-7890");
-console.log("Test for correct email formal: ");
+console.log("Test for correct email format: ");
 testEmailAddress("jemcphe11@gmail.com");
 console.log("Test for proper URL format: ")
 testURL("http://www.JamesIsAwesome.com");
 console.log("Test for number that displays with 2 decimal places: ")
 twoDecimalPlaces(11.5);
-console.log("Test whether number is above or below a number with a certain percentage: ")
+console.log("Convert String to Number: ");
+stringToNumber("777");
