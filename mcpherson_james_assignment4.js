@@ -10,7 +10,6 @@ var testPhoneNumber = function (phoneNumber) {
 	} else {
 		console.log("" + phoneNumber);
 		return true; 
-		// MAKEUP: return Boolean, deliverable 3, deliverable 2
 	}
 };
 
@@ -62,6 +61,17 @@ var stringToNumber = function (number) {
 	}
 };
 
+/******************** Array Library *********************/
+
+//Find the Total Value of Numbers in an Array
+var getArrayTotal = function (array) {
+	var total = array.reduce(
+		function (a, b) {
+			return a + b;
+		}); // reduces array from left to right, leaving us with a single Lump Sum Value.
+	console.log("" + total);
+};
+
 console.log("Test for correct phone number format: ")
 testPhoneNumber("123-456-7890");
 console.log("Test for correct email format: ");
@@ -72,3 +82,5 @@ console.log("Test for number that displays with 2 decimal places: ")
 twoDecimalPlaces(11.5);
 console.log("Convert String to Number: ");
 stringToNumber("777");
+console.log("Find the Total Value of the numbers in an Array: ")
+getArrayTotal([1, 2, 3, 4]);
