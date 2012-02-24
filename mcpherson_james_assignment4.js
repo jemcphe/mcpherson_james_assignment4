@@ -1,3 +1,8 @@
+//Scalable Data Infrastructure
+//Term: 1202
+//Project 4
+//02/23/2012
+
 alert("JavaScript works!");
 
 /***********************String Library***********************/
@@ -5,11 +10,11 @@ alert("JavaScript works!");
 var testPhoneNumber = function (phoneNumber) {
 	var validNumber =   /^\d{3}-\d{3}-\d{4}$/; // regular expression tests for ###-###-####
 	if(!validNumber.exec(phoneNumber)) {
-		console.log("Sorry, " + phoneNumber + " is an invalid phone number");
-		return false; 
+		var result = console.log("Sorry, " + phoneNumber + " is an invalid phone number");
+		return result;
 	} else {
-		console.log("" + phoneNumber);
-		return true; 
+		var result = console.log("" + phoneNumber);
+		return result; 
 	}
 };
 
@@ -18,11 +23,11 @@ var testPhoneNumber = function (phoneNumber) {
 var testEmailAddress = function (emailAddress) {
 	var validEmail = /^([A-Za-z0-9]+([_.]+[A-Za-z0-9]+)*@[A-Za-z0-9]*(.){1}[a-zA-Z]{2,4})$/; // Regular Expression
 	if(!validEmail.exec(emailAddress)) {
-		console.log("Sorry, " + emailAddress + " is an invalid Email Address");
-		return false; 
+		var result = console.log("Sorry, " + emailAddress + " is an invalid Email Address");
+		return result; 
 	} else {
-		console.log("" + emailAddress);
-		return true;
+		var result = console.log("" + emailAddress);
+		return result;
 	}
 };
 
@@ -31,11 +36,11 @@ var testEmailAddress = function (emailAddress) {
 var testURL = function(webSite) {
 	var validURL = /^(http[s]?:\/\/)?(www\.)?[a-zA-Z0-9\.]+(.){1}[a-z]{3}$/;
 	if(!validURL.exec(webSite)) {
-		console.log("Sorry, " + webSite + " is an invalid URL");
-		return false; 
+		var result = console.log("Sorry, " + webSite + " is an invalid URL");
+		return result; 
 	} else {
-		console.log("" + webSite);
-		return true;
+		var result = console.log("" + webSite);
+		return result;
 	}
 };
 
@@ -44,9 +49,7 @@ var testURL = function(webSite) {
 //format for 2 decimal places
 var twoDecimalPlaces = function (number) {
 	var validEntry= number.toFixed(2);
-	if(validEntry) {
-		console.log("" + validEntry); 
-	}
+	return validEntry;
 };
 
 //Given a string version of a Number, return the value as an actual Number
@@ -69,18 +72,19 @@ var getArrayTotal = function (array) {
 		function (a, b) {
 			return a + b;
 		}); // reduces array from left to right, leaving us with a single Lump Sum Value.
-	console.log("" + total);
+	var result = console.log("" + total);
+	return result;
 };
 
-console.log("Test for correct phone number format: ")
+console.log("Test for correct phone number format: ");
 testPhoneNumber("123-456-7890");
 console.log("Test for correct email format: ");
 testEmailAddress("jemcphe11@gmail.com");
-console.log("Test for proper URL format: ")
+console.log("Test for proper URL format: ");
 testURL("http://www.JamesIsAwesome.com");
-console.log("Test for number that displays with 2 decimal places: ")
-twoDecimalPlaces(11.5);
+console.log("Test for number that displays with 2 decimal places: ");
+console.log("" + twoDecimalPlaces(11.5));
 console.log("Convert String to Number: ");
 stringToNumber("777");
-console.log("Find the Total Value of the numbers in an Array: ")
+console.log("Find the Total Value of the numbers in an Array: ");
 getArrayTotal([1, 2, 3, 4]);
